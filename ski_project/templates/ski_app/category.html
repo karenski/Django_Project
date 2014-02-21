@@ -1,0 +1,49 @@
+{% extends 'ski_app/base.html' %}
+{% load static %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+
+{% block body_block %}
+<div class="hero-unit">
+		<h2>{{ category_name }}</h2>
+
+		<form method="get" enctype="text/plain">
+			Brand:  
+			{{ form.brand }}
+
+			<div>
+				Type: 
+
+				{{ form.intended_usage }}
+			</div>
+
+			Reinforcement Material:
+			{{ form.core_material }}
+
+			<input type="submit" value="Submit">
+		</form>
+
+		<p class = 'type_describe'> <b>Big Pow:</b> these fatties are for going out after it has nuked for days and you need to stay afloat in waist deep pow. If you have a reason to buy one of these, you're a lucky SOB. <i>Waist 120+ mm</i>.</p>
+		<p class = 'type_describe'><b>Pow:</b>  Good for you.  You live in an area where it snows regulary.  <i>Waist 115-120 mm</i>.</p>
+		<p class = 'type_describe'><b>All Mountain Pow:</b>  You want a fat ski that can carve on groomers, plow through crud, and float on top of knee deep snow.  <i>Waist 100-110 mm.</i> </p>
+		<p class = 'type_describe'><b>All Mountain:</b>  You're probably an East Coaster that wants a bit more underfoot when a storm has rolled through. <i>Waist around 100 mm</i>. </p>
+		<p class = 'type_describe'><b>All Mountain Carve:</b>  if you love crushing groomers and crave a ski that's like that girl from that Sir Mixalot jam "Baby Got Back", these babies have a fat shovel <i>(above 130 mm)</i> and a relatively narrow waist <i>(below 100 mm)</i>.</p>
+		<p class = 'type_describe'><b>Frontsider:</b>  for those who spend most of their time on the frontside and want a versatile ski that can handle moguls. <i>Waist 90 mm and below</i>.</p>
+
+
+			{% if pages %}
+			<div>
+				{% for page in pages %}
+				<span>
+					<img src="{{ page.picture.url }}" height="100" width="100"/><a href="/ski_app/{{ category.name }}/{{ page.url }}">{{ page.brand }} {{ page.model_name }}</a>
+				</span>
+
+				{% endfor %}
+			</div>
+			{% else %}
+			<strong>No pages currently in category.</strong>
+			{% endif %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends 'ski_app/base.html' %}
+
+
+{% block body_block %}
+<div class="hero-unit">
+		{% if user.is_authenticated %}
+		<h1>Welcome to the Ski Database {{ user.username }}</h1>
+		{% else %}
+		<h1>Welcome to the Ski Database</h1>
+		{% endif %}
+</div>
+
+<div class="row-fluid">
+	<div class="span6">
+		<h2>Equipment Categories</h2>	
+		{% if categories %}
+			<ul>
+				{% for category in categories %}
+					<li><a href="/ski_app/{{ category.url }}">{{ category.name }}</a></li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<strong>There are no categories present.</strong>
+		{% endif %}
+</div>
+
+{% endblock %}

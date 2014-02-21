@@ -1,0 +1,35 @@
+{% extends "ski_app/base.html" %}
+
+{% load static %}
+
+{% block title %}Search{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+	<h1>Search with Ski App</h1>
+	<br>
+
+	<div class="container-fluid">
+		<form class="form-signin span8" id="user-form" method="post" action="/ski_app/search/">
+			{% csrf_token %}
+			<input type="text" size="50" name="query" value="" id="query" />
+			<input class="btn btn-primary" type="submit" name="submit" value="Search" />
+		</form>
+
+		{% if result_list %}
+		<div style="clear: both;">
+			<ol>
+			{% for result in result_list %}
+				<li>
+					<b><a href="{{  result.link  }}">{{ result.title }}</a></b><br>
+					<em>{{ result.summary }}</em>
+				</li>
+			{% endfor %}
+			</ol> 
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
+
+
