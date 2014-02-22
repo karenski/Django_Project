@@ -1,0 +1,14 @@
+Django==1.5.4
+PIL==1.1.7
+South==0.8.4
+stevedore==0.13
+virtualenv==1.11
+virtualenv-clone==0.2.4
+virtualenvwrapper==4.2
+wsgiref==0.1.2
+gunicorn==0.17.2
+psycopg2==2.4.5
+wsgiref==0.1.2.
+dj-database-url==0.2.2
+gevent==0.12.4
+greenlet==0.3.4

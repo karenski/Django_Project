@@ -1,0 +1,23 @@
+{% extends 'ski_app/base.html' %}
+
+{% block body_block %}
+		{% if item %}
+		<img src="{{ item.picture.url }}" />
+		<h1>{{ item.brand }} {{ item.model_name }}</h1>
+			<ul>
+				<li>Skier Level: {{ item.skier_level }}</li>
+				<li>Intended Usage: {{ item.intended_usage }}</li>
+				<li>Camber Index: {{ item.rocker_ratio }}/100 </li>
+				<li>Rocker Profile: {{ item.profile }} </li>
+				<li>Dimensions: {{ item.tip_width }} / {{ item.waist_width }} / {{ item.tail_width }} ({{ item.ref_length }} cm)</li>
+				<li>Turn Radius: {{ item.turn_radius }} m </li>
+				<li>Core Material: {{ item.core_material}} </li>
+				<li>Reinforcement Material: {{ item.reinforcement_material }}</li>
+				<li>Available Lengths: {{ item.ski_length }}</li>
+				<li>Rating: {{ item.rating }}</li>
+			</ul>
+			
+		{% else %}
+			The specified item {{ item_name }} does not exist!
+		{% endif %}
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+	<head>
+		<title>Ski Database - {% block title %} Skis! {% endblock %}</title>
+		<link rel="stylesheet" href="{% static "css/base.css" %}" />
+		<img = src="{% static "profile.jpg" %}" alt="Me_Pic" width= "200" height = "200" />
+	</head>
+
+	<body>
+
+		<h1>About Me</h1>
+		<p1>I like to ski and I know how to program a little bit.  This is my project to develop a web application that helps you research what the right ski equipment is for you. </p1>
+
+		<hr/>
+
+		<div>
+			<ul>
+			{% if user.is_authenticated %}
+				<li><a href='/ski_app/add_ski/'>Add a Ski</a></li>
+				<li><a href='/ski_app/logout/'>Logout</a><li>
+			{% else %}
+				<li><a href='/ski_app/register/'>Register</a><li>
+				<li><a href='/ski_app/login/'>Login</a><li>
+			{% endif %}
+				<li><a href='/ski_app/'>Home</a><li>
+				<li><a href='/ski_app/about/'>About Us</a><li>
+			</ul>
+		</div>
+
+		<p> You have visited the site <b>{{ visits }}</b> times. </p>
+
+
+	</body>
+
+</html>
