@@ -1,1 +1,1 @@
-web: python ski_project/manage.py run_gunicorn -b 0.0.0.0:\$PORT -w 8 -k gevent --max-requests 500 --preload
+web: python manage.py run_gunicorn -b 0.0.0.0:\$PORT -w 8 -k gevent --max-requests 500 --preload
