@@ -8,7 +8,6 @@ virtualenvwrapper==4.2
 wsgiref==0.1.2
 gunicorn==0.17.2
 psycopg2==2.4.5
-wsgiref==0.1.2.
 dj-database-url==0.2.2
 gevent==0.12.4
 greenlet==0.3.4
