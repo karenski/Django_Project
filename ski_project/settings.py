@@ -14,12 +14,12 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-if os.environ.get("PROD"):
-    # import dj_database_url
-    # DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-    TEMPLATE_DEBUG = DEBUG = False
-else:
-    TEMPLATE_DEBUG = DEBUG = True
+# if os.environ.get("PROD"):
+#     # import dj_database_url
+#     # DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+#     TEMPLATE_DEBUG = DEBUG = False
+# else:
+TEMPLATE_DEBUG = DEBUG = True
 
 
 DATABASES = {
@@ -34,7 +34,7 @@ DATABASES = {
     }
 }
 
-
+print "why"
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -145,6 +145,8 @@ INSTALLED_APPS = (
     'gunicorn',
     'ski_app',
 )
+
+print 'got this'
 
 LOGIN_URL = '/ski_app/login/'
 
