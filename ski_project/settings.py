@@ -9,19 +9,17 @@ TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 DATABASE_PATH = os.path.join(PROJECT_PATH, 'ski_app.db')
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
-
 if os.environ.get("PROD"):
     import dj_database_url
     DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+    TEMPLATE_DEBUG = DEBUG = False
 else:
+    ""
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -33,6 +31,8 @@ else:
             'PORT': '',                      # Set to empty string for default.
         }
     }
+
+    TEMPLATE_DEBUG = DEBUG = True
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
