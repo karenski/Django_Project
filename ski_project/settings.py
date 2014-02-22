@@ -20,7 +20,8 @@ if os.environ.get("PROD"):
     TEMPLATE_DEBUG = DEBUG = False
     DATABASES = {}
 else:
-    ""
+    print "I am here"
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
