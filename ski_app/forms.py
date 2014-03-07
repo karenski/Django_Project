@@ -29,9 +29,9 @@ class SkiForm(forms.ModelForm):
 
 
 class SkiSearchForm(forms.Form):
-	brand = forms.ChoiceField(required=False, choices=(("Rosignol", "Rosignol"), ("RosZZ", "RosZZ"), ("KosZZ", "KosZZ")))
-	intended_usage = forms.ChoiceField(required=False, choices=(("Rosignol", "Rosignol"), ("RosZZ", "RosZZ"), ("KosZZ", "KosZZ")))
-	core_material = forms.ChoiceField(required=False, choices=(("Rosignol", "Rosignol"), ("RosZZ", "RosZZ"), ("KosZZ", "KosZZ")))
+	brand = forms.ChoiceField(required=False, choices=(('','All'),("Rossignol", "Rossignol"), ("Armada", "Armada"), ("Atomic", "Atomic"), ("Volkl", "Volkl"), ("Blizzard", "Blizzard")))
+	intended_usage = forms.ChoiceField(required=False, choices=(('','All'),('Pow', 'Pow'), ('All_Mountain_Pow', 'All_Mountain_Pow'), ('All_Mountain', 'All_Mountain'), ('Frontsider', 'Frontsider'), ('All_Mountain_Carve', 'All_Mountain_Carve'), ('Big_Pow', 'Big_Pow')))
+	reinforcement_material = forms.ChoiceField(required=False, choices=(('','All'),('Bamboo', 'Bamboo'), ('Titanium', 'Titanium'), ('None', 'None'), ('Wood', 'Wood')))
 
 
 class UserForm(forms.ModelForm):

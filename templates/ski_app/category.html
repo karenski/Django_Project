@@ -5,7 +5,7 @@
 
 
 {% block body_block %}
-<div class="hero-unit">
+<div class="main-unit">
 		<h2>{{ category_name }}</h2>
 
 		<form method="get" enctype="text/plain">
@@ -19,7 +19,7 @@
 			</div>
 
 			Reinforcement Material:
-			{{ form.core_material }}
+			{{ form.reinforcement_material }}
 
 			<input type="submit" value="Submit">
 		</form>
@@ -35,9 +35,9 @@
 			{% if pages %}
 			<div>
 				{% for page in pages %}
-				<span>
-					<img src="{{ page.picture.url }}" height="100" width="100"/><a href="/ski_app/{{ category.name }}/{{ page.url }}">{{ page.brand }} {{ page.model_name }}</a>
-				</span>
+				<div class = "ski_item">
+					<img src="{{ page.picture.url }}" height="150" width="150"/><br><a href="/ski_app/{{ category.name }}/{{ page.url }}" >{{ page.brand }} {{ page.model_name }}</a>
+				</div>
 
 				{% endfor %}
 			</div>

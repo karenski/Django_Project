@@ -61,7 +61,7 @@ def category(request, category_name_url):
 	if form.is_valid():
 		for key, value in form.cleaned_data.items():
 			if value:
-				print value
+				print key, value
 				filter_dict[key] = value
 
 	try:

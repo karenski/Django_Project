@@ -10,7 +10,7 @@
     <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 		<title>Ski Database - {% block title %} Skis! {% endblock %}</title>
-		<img src="{% static "HTH_pano.jpg" %}" alt="HTH Traverse" vspace="10"/>
+		<img id="HTH" src="{% static "HTH_pano.jpg" %}" alt="HTH Traverse"/>
 </head>
 
 <body>
@@ -49,13 +49,7 @@
 
   <div class="container-fluid" >
       <div class="row-fluid">
-          <div class="span3">
-              <div class="well sidebar-nav">
-                  <!--- Empty for the timebeing -->
-              </div>
-              <!--/.well -->
-          </div>
-          <!--/span-->
+
           <div class="span9">
               {% block body_block %}
               {% endblock %}

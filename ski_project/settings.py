@@ -34,7 +34,7 @@ DATABASES = {
     }
 }
 
-print "why"
+#print "why"
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -146,7 +146,7 @@ INSTALLED_APPS = (
     'ski_app',
 )
 
-print 'got this'
+#print 'got this'
 
 LOGIN_URL = '/ski_app/login/'
 

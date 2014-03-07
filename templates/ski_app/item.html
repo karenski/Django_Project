@@ -1,8 +1,12 @@
 {% extends 'ski_app/base.html' %}
 
 {% block body_block %}
+<div class="ski-unit">
 		{% if item %}
+		<div>
 		<img src="{{ item.picture.url }}" />
+		</div>
+		<div>
 		<h1>{{ item.brand }} {{ item.model_name }}</h1>
 			<ul>
 				<li>Skier Level: {{ item.skier_level }}</li>
@@ -16,8 +20,9 @@
 				<li>Available Lengths: {{ item.ski_length }}</li>
 				<li>Rating: {{ item.rating }}</li>
 			</ul>
-			
+		</div>	
 		{% else %}
 			The specified item {{ item_name }} does not exist!
 		{% endif %}
+</div>
 {% endblock %}

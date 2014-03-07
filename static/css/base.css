@@ -9,24 +9,57 @@ body {
 
 }
 
+img {
+	border-radius: 6px;
+}
+
+#HTH {
+	margin: 20px;
+	border-radius: 6px;
+	width: 1160px;
+}
+
+/* Ski Selection Page Formatting */
+
 .type_describe {
 	font-size: 8pt;
 	line-height: 100%;
 }
 
-.ski {
-	display: inline;
-	background-color: #404040;
-	padding: 3px;
-	margin: 3px;
+.ski_item {
+	display: inline-table;
+	font-size: 10pt;
+	margin: 10px;
+	position: auto;
 }
 
-.ski a {
-	color: white;
-	text-decoration: none;
+.main-unit {
+	padding: 30px;
+  	margin-bottom: 30px;
+  	font-size: 18px;
+  	font-weight: 200;
+  	line-height: 20px;
+	color: inherit;
+	background-color: #eeeeee;
+	border-radius: 6px;
+	width: 1100px;
+
 }
 
-.ski a:hover {
-	color: #FF5A65;
-	text-decoration: none;
+/* Ski Item Page Formatting */
+
+.ski-unit {
+	padding: 30px;
+  	margin-bottom: 30px;
+  	font-size: 16px;
+  	font-weight: 200;
+  	line-height: 30px;
+	color: inherit;
+	background-color: #eeeeee;
+	border-radius: 6px;
+	width: 1100px;
+}
+
+.ski-unit div {
+	display: inline-block;
 }
