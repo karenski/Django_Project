@@ -5,10 +5,12 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'css/bootstrap-fluid-adj.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/bootstrap-fluid-adj.css' %}" rel="stylesheet">
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet"> -->
+    <link rel="stylesheet/less" type="text/css" href="{% static 'css/base.less' %}" />
+    <script src="{% static 'js/less-1.7.0.min.js' %}" type="text/javascript"></script>
 		<title>Ski Database - {% block title %} Skis! {% endblock %}</title>
 		<img id="HTH" src="{% static "HTH_pano.jpg" %}" alt="HTH Traverse"/>
 </head>

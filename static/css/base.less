@@ -1,0 +1,130 @@
+/*!
+ * Bootstrap v2.2.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+ 
+// CSS Reset
+@import "../less/reset.less";
+ 
+// Core variables and mixins
+@import "../less/variables.less";
+// @import "variables.less"; // import our own variables here
+@import "../less/mixins.less";
+ 
+// Grid system and page structure
+@import "../less/scaffolding.less";
+@import "../less/grid.less";
+@import "../less/layouts.less";
+ 
+// Base CSS
+@import "../less/type.less";
+@import "../less/code.less";
+@import "../less/forms.less";
+@import "../less/tables.less";
+ 
+// Components: common
+@import "../less/sprites.less";
+@import "../less/dropdowns.less";
+@import "../less/wells.less";
+@import "../less/component-animations.less";
+@import "../less/close.less";
+ 
+// Components: Buttons & Alerts
+@import "../less/buttons.less";
+@import "../less/button-groups.less";
+@import "../less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+ 
+// Components: Nav
+@import "../less/navs.less";
+@import "../less/navbar.less";
+@import "../less/breadcrumbs.less";
+@import "../less/pagination.less";
+@import "../less/pager.less";
+ 
+// Components: Popovers
+@import "../less/modals.less";
+@import "../less/tooltip.less";
+@import "../less/popovers.less";
+ 
+// Components: Misc
+@import "../less/thumbnails.less";
+@import "../less/media.less";
+@import "../less/labels-badges.less";
+@import "../less/progress-bars.less";
+@import "../less/accordion.less";
+@import "../less/carousel.less";
+@import "../less/hero-unit.less";
+ 
+// Utility classes
+@import "../less/utilities.less"; // Has to be last to override when necessary
+
+li {
+	list-style-type: none;
+}
+
+body {
+	font-family: 'FuturaBT-Book', Helvetica, sans-serif;
+	background-color: #86A3B3;
+	;
+
+}
+
+img {
+	border-radius: 6px;
+}
+
+#HTH {
+	margin: 20px;
+	border-radius: 6px;
+	width: 1160px;
+}
+
+/* Ski Selection Page Formatting */
+
+.type_describe {
+	font-size: 8pt;
+	line-height: 100%;
+}
+
+.ski_item {
+	display: inline-table;
+	font-size: 10pt;
+	margin: 10px;
+	position: auto;
+}
+
+.main-unit {
+	padding: 30px;
+  	margin-bottom: 30px;
+  	font-size: 18px;
+  	font-weight: 200;
+  	line-height: 20px;
+	color: inherit;
+	background-color: #eeeeee;
+	border-radius: 6px;
+	width: 1100px;
+
+}
+
+/* Ski Item Page Formatting */
+
+.ski-unit {
+	padding: 30px;
+  	margin-bottom: 30px;
+  	font-size: 16px;
+  	font-weight: 200;
+  	line-height: 30px;
+	color: inherit;
+	background-color: #eeeeee;
+	border-radius: 6px;
+	width: 1100px;
+}
+
+.ski-unit div {
+	display: inline-block;
+}
