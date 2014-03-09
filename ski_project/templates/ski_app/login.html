@@ -1,0 +1,25 @@
+{% extends 'ski_app/base.html' %}
+
+{% block body_block %}
+<div class="hero-unit">
+	<h1>Login to the Ski Database</h1>
+
+	<div class="container">
+	<form class="form-signin span4" id="login-form" method="post" action="/ski_app/login/">
+		<h2 class="form-signin-heading">Please sign in</h2>
+		{% csrf_token %}
+
+		{% if bad_details %}
+		<p><b>The login credentials you supplied were incorrect.</b><p>
+		{% elif disabled_account %}
+		<p><b>Your account is currently disabled.</b><p>
+		{% endif %}
+
+		Username: <input type="text" class="input-block-level" placeholder="Username" name="username" value="" size="50"> <br>
+		Password: <input type="text" class="input-block-level" placeholder="Password" name="password" value="" size="50"> <br>
+		<button class="btn btn-primary" type="submit"/>Sign Me In</button>
+	</form>
+
+	</div>
+</div>
+{% endblock %}
